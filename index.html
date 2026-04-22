@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced Navbar</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div class="container">
+
+    <!-- LEFT: Logo -->
+     <a class="navbar-brand" href="#">
+    <img src="images/logo.png" alt="ZAYKKA Logo" class="logo">
+</a>
+
+    <!-- FIXED TOGGLER 🔥 -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navContent">
+
+      <!-- CENTER MENU -->
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#feature">Feature</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+         <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+      </ul>
+
+      <!-- RIGHT SECTION -->
+      <div class="d-flex align-items-center">
+
+        <!-- Search -->
+        <div class="search-box me-3">
+          <input type="text" placeholder="Search...">
+          <i class="fas fa-search"></i>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div class="dropdown me-3">
+          <a href="#" class="icon" data-bs-toggle="dropdown">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-end p-3" style="width: 250px;">
+            
+            <h6>Your Cart</h6>
+
+            <div class="d-flex justify-content-between">
+              <span>Burger</span>
+              <span>₹120</span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <span>Pizza</span>
+              <span>₹250</span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <span>Cold Drink</span>
+              <span>₹60</span>
+            </div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between fw-bold">
+              <span>Total</span>
+              <span>₹430</span>
+            </div>
+
+            <button class="btn btn-danger w-100 mt-2">Checkout</button>
+
+          </div>
+        </div>
+
+        <!-- Login Modal Button -->
+        <a href="#" class="icon" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="fas fa-user"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content login-box">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Admin Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Username">
+          <input type="password" class="form-control mb-3" placeholder="Password">
+          <button type="submit" class="btn btn-danger w-100">Login</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- top banner -->
+<section id="home">
+    <div class="container-fluid px-0 position-relative">
+
+        <!-- Background Image -->
+        <img src="images/bg/background-images.jpg" 
+             class="w-100" 
+             style="height: 70vh; object-fit: cover;" 
+             alt="Banner">
+
+        <!-- Overlay Content -->
+        <div class="position-absolute top-50 start-0 translate-middle-y text-white ps-5">
+
+            <h1>Good food choices are good investment.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, excepturi.</p>
+
+            <div class="mt-4">
+                <button class="btn btn-warning">
+                    Order Now <i class="fas fa-shopping-basket ms-2"></i>
+                </button>
+
+                <button class="btn btn-light ms-3">
+                    Learn More <i class="fas fa-angle-right ms-2"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+ <!-- section 2 counter -->
+  <section id="counter">
+    <section class="counter-section">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-md-3 mb-5">
+                    <h2><span id="count1"></span>+</h2>
+                    <p>Customers</p>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2><span id="count2"></span>+</h2>
+                    <p>Orders</p>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2><span id="count3"></span>+</h2>
+                    <p>Foods</p>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2><span id="count4"></span>+</h2>
+                    <p>Reviews</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>
+<!-- features section -->
+<section class="features">
+    <h1 class="heading"> our <span>features</span> </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="images/bg/feat-1.jpg">
+            <h3>fresh & organic</h3>
+            <p>Healthy and fresh food for your daily life.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="images/bg/feat-2.avif">
+            <h3>free delivery</h3>
+            <p>Fast and free delivery at your doorstep.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="images/bg/feat-3.jpg">
+            <h3>easy payments</h3>
+            <p>Secure and easy payment methods.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+    </div>
+</section>
+<!-- product section -->
+<section class="products">
+    <h1 class="heading"> our <span>products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <img src="images/bg/product-1.jpg">
+            <h3>fresh orange</h3>
+            <div class="price">₹20 - ₹30</div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <span class="discount">-15%</span>
+            <img src="images/bg/product-2.jpg">
+            <h3>fresh onion</h3>
+            <div class="price">₹30 - ₹40</div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <img src="images/bg/product-3.jpg">
+            <h3>fresh veg</h3>
+            <div class="price">₹50 - ₹80</div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+    </div>
+</section>
+<!-- categories section -->
+<section class="categories">
+    <h1 class="heading"> product <span>categories</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box veg">
+            <h3>vegetables</h3>
+            <p>upto 45% off</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+        <div class="box fruit">
+            <h3>fruits</h3>
+            <p>upto 45% off</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+        <div class="box dairy">
+            <h3>dairy</h3>
+            <p>upto 45% off</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+    </div>
+</section>
+
+<!--customer's  eview -->
+<section class="review">
+    <h1 class="heading"> customer's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/review/customer-1.webp" alt="">
+            <p>Very fresh products and fast delivery. Highly recommended!</p>
+            <h3>Rahul Sharma</h3>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/review/customer-2.jpg" alt="">
+            <p>Great quality vegetables and fruits. Loved the service!</p>
+            <h3>Priya Verma</h3>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/review/customer-3.jpg" alt="">
+            <p>Easy payment and smooth ordering experience.</p>
+            <h3>Amit Kumar</h3>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- blogs section -->
+<section class="blogs">
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/img/foods-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icons">
+                    <span>👤 by admin</span>
+                    <span>📅 20th May, 2025</span>
+                </div>
+                <h3>fresh and organic vegetables</h3>
+                <p>Healthy lifestyle starts with fresh food. Know why organic is best.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/img/foods-2.webp" alt="">
+            </div>
+            <div class="content">
+                <div class="icons">
+                    <span>👤 by admin</span>
+                    <span>📅 18th May, 2025</span>
+                </div>
+                <h3>benefits of fresh fruits</h3>
+                <p>Fruits are full of vitamins. Improve your immunity naturally.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/img/foods-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icons">
+                    <span>👤 by admin</span>
+                    <span>📅 15th May, 2025</span>
+                </div>
+                <h3>easy and healthy recipes</h3>
+                <p>Try simple and tasty recipes using fresh ingredients.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- fooetr section -->
+<footer class="footer">
+
+    <div class="box-container">
+
+        <!-- 1. Zaykka -->
+        <div class="box">
+            <h3>Zaykka</h3>
+            <p>Fresh and organic food delivered to your doorstep. Healthy life starts with healthy food.</p>
+           <div class="social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/neeraj-gupta-9b40bb228/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
+        </div>
+
+        <!-- 2. Contact Info -->
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">📞 +91 9211086568</a>
+            <a href="#">📧 neerajgupta1052gmail.com</a>
+            <a href="#">📍 Neeraj, India</a>
+        </div>
+
+        <!-- 3. Quick Links -->
+        <div class="box">
+    <h3>quick links</h3>
+
+    <a href="#home">home</a>
+    <a href="#features">features</a>
+    <a href="#products">products</a>
+    <a href="#categories">categories</a>
+    <a href="#review">review</a>
+    <a href="#blogs">blogs</a>
+
+</div>
+
+        <!-- 4. Newsletter -->
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>Subscribe for latest updates</p>
+            <input type="email" placeholder="enter your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+        </div>
+
+    </div>
+
+    <div class="credit"> © 2026 Zaykka | All Rights Reserved </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<<script>
+const counters = [
+  {id: "count1", target: 1500},
+  {id: "count2", target: 1200},
+  {id: "count3", target: 800},
+  {id: "count4", target: 500}
+];
+
+counters.forEach(counter => {
+  let count = 0;
+  const update = () => {
+    count += Math.ceil(counter.target / 100);
+    if (count < counter.target) {
+      document.getElementById(counter.id).innerText = count;
+      setTimeout(update, 30);
+    } else {
+      document.getElementById(counter.id).innerText = counter.target;
+    }
+  };
+  update();
+});
+
+</script>
+
+</body>
+</html>
